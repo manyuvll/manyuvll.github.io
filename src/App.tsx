@@ -1,56 +1,29 @@
-import React from 'react';
-import logo from './logo.svg';
-import { Counter } from './features/counter/Counter';
-import './App.css';
+import { createGlobalStyle } from 'styled-components';
+import NavigationBar from './features/navigationBar/NavigationBar'
+import Win95Font from './assets/fonts/windows95.woff'
+import DetailFont from './assets/fonts/detailFont.woff'
+
+const Fonts = createGlobalStyle`
+  @font-face {
+    font-family: 'win_custom';
+    src: url(${Win95Font});
+  }
+  @font-face {
+    font-family: 'win95_light';
+    src: url(${DetailFont});
+  }
+  body, html  {
+    background-color: #008f8f;
+    overflow: hidden;
+  }
+`
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <Counter />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <span>
-          <span>Learn </span>
-          <a
-            className="App-link"
-            href="https://reactjs.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            React
-          </a>
-          <span>, </span>
-          <a
-            className="App-link"
-            href="https://redux.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Redux
-          </a>
-          <span>, </span>
-          <a
-            className="App-link"
-            href="https://redux-toolkit.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Redux Toolkit
-          </a>
-          ,<span> and </span>
-          <a
-            className="App-link"
-            href="https://react-redux.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            React Redux
-          </a>
-        </span>
-      </header>
+      <Fonts />
+      <NavigationBar></NavigationBar>
     </div>
   );
 }
