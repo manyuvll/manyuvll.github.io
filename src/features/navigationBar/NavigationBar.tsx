@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import StartButton from '../startButton/StartButton'
+import StartMenu from '../startMenu/StartMenu'
 
 const NavBar = styled.div`
 position: fixed;
@@ -22,7 +23,8 @@ align-items: center;
 export default function NavigationBar() {
     return (
         <NavBar>
-            <StartButton></StartButton>
+            <StartButton/>
+            <StartMenu/>
         </NavBar>
     )
 

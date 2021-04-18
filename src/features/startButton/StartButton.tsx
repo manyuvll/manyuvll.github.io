@@ -36,5 +36,4 @@ export default function StartButton() {
             <StartBtnText>Start</StartBtnText>
         </StartBtn>
     )
-
 }
