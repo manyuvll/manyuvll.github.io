@@ -1,5 +1,8 @@
 import styled from 'styled-components';
 import restart from '../../assets/icons/shut_down_normal-2.png'
+import React, { useRef, useEffect, Ref } from "react";
+import { useAppDispatch } from '../../app/hooks';
+import { click } from '../startButton/startButtonSlice';
 
 const StartMenuWrapper = styled.div`
     position: absolute;
@@ -33,7 +36,7 @@ const WindowsSpan = styled.span`
     writing-mode: vertical-lr;
     transform:rotate(180deg);
     color: #c0c0c0;
-    font-size: 2.4rem;
+    font-size: 2.1rem;
     margin-bottom: 7px;
     filter: blur(0.5px);
 `
@@ -87,9 +90,38 @@ const ItemSeparator = styled.span`
     border-radius: 1px;
 `
 
-export default function StartMenu() {
+function useOutsideAlerter(ref: React.RefObject<HTMLDivElement>, startButtonRef: React.RefObject<HTMLDivElement>)
+ {
+    const dispatch = useAppDispatch()
+    useEffect(() => {
+        /**
+         * Alert if clicked on outside of element
+         */
+        function handleClickOutside(event: Event) {
+            if (ref.current && startButtonRef.current && !ref.current.contains(event.target as Node) && !startButtonRef.current.contains(event.target as Node)) {
+                dispatch(click())
+            }
+        }
+
+        // Bind the event listener
+        document.addEventListener("mousedown", handleClickOutside);
+        return () => {
+            // Unbind the event listener on clean up
+            document.removeEventListener("mousedown", handleClickOutside);
+        };
+    }, [ref, dispatch, startButtonRef]);
+}
+
+interface StartMenuProps {
+    startButtonRef: React.RefObject<HTMLDivElement>
+}
+
+export default function StartMenu({ startButtonRef }: StartMenuProps) {
+    const wrapperRef = useRef(null);
+    useOutsideAlerter(wrapperRef, startButtonRef);
+
     return (
-        <StartMenuWrapper>
+        <StartMenuWrapper ref={wrapperRef}>
             <StartMenuWindowsLogo>
                 <WindowsSpan>Windows</WindowsSpan>
                 <NinetyFiveSpan>95</NinetyFiveSpan>
