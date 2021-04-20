@@ -15,6 +15,11 @@
   src: url("./assets/fonts/FranklinGothic.woff2");
 }
 
+@font-face {
+  font-family: "w95fa";
+  src: url("./assets/fonts/w95fa.woff2");
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",

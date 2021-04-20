@@ -8,7 +8,7 @@ import React, { useRef } from "react";
 
 const NavBar = styled.div`
 position: fixed;
-background-color: #c0c0c0;
+background-color: #bfbfbf;
 bottom: 0;
 width: 100vw;
 height: 2.5rem;

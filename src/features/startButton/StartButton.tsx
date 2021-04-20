@@ -16,18 +16,19 @@ const StartBtn = styled.div`
         align-items: center;
         left:0;
         position: relative;
+        border-radius: 1px;
         border-top: 2px solid #f9f9f9;
         border-left: 2px solid #f9f9f9;
-        border-right: 2px solid #0d0d0d;
-        border-bottom: 2px solid #0d0d0d;
+        border-right: 2px solid #20262b;
+        border-bottom: 2px solid #20262b;
         margin-left: 0.2rem;
         justify-content: space-around;
         ${(props: StartButtonState) => (props.isClicked ? 
             `
                 border-bottom: 2px solid #f9f9f9;
                 border-right: 2px solid #f9f9f9;
-                border-top: 2px solid #0d0d0d;
-                border-left: 2px solid #0d0d0d;
+                border-top: 2px solid #20262b;
+                border-left: 2px solid #20262b;
                 &:before {
                     border: 2px dotted rgb(0, 0, 0);
                     width: 5.4rem;
