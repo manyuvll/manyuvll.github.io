@@ -3,7 +3,7 @@ import aboutIcon from '../../assets/icons/msg_question-2.png'
 
 const HeaderWrapper = styled.div`
     width: auto;
-    height: 20px;
+    height: 24px;
     background-color: #000080;
     border-top: 2px solid #bfc6c8;
     border-left: 2px solid #bfc6c8;
@@ -11,7 +11,8 @@ const HeaderWrapper = styled.div`
     border-bottom: 2px solid #bfc6c8;
     color: white;
     font-family: w95fa;
-    font-size: 1rem;
+    font-size: 0.9rem;
+    font-weight: bold;
     display: flex;
     align-items: center;
     padding-left: 5px;

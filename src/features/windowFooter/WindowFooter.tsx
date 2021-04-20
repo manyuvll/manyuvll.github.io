@@ -1,15 +1,8 @@
 import styled from 'styled-components';
-import resizerImg from '../../assets/icons/window-footer-resizer.png';
 
 const NormalFooterWrapper = styled.div`
-    width: 100%;
     display: flex;
-    position: absolute;
-    bottom: 0; 
     box-sizing: border-box;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 `
 const NormalFooter = styled.div`
     width: 100%;
@@ -17,7 +10,6 @@ const NormalFooter = styled.div`
     margin-right: 2px;
     margin-left: 2px;
     height: 1.4rem;
-    position: relative;
     border-bottom: 1px solid #f9f9f9;
     border-right: 1px solid #f9f9f9;
     border-top: 1px solid #93979a;
