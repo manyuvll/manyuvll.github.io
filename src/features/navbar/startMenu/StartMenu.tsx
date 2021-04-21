@@ -40,7 +40,7 @@ const WindowsSpan = styled.span`
     color: #c0c0c0;
     font-size: 2.1rem;
     margin-bottom: 7px;
-    filter: blur(0.5px);
+    //filter: blur(0.5px);
 `
 const NinetyFiveSpan = styled.span`
     font-family: "ninety_five";
@@ -48,7 +48,7 @@ const NinetyFiveSpan = styled.span`
     transform:rotate(180deg) scaleY(1.2);;
     color: #f9f9f9;
     font-size: 2rem;
-    filter: blur(0.5px);
+    //filter: blur(0.5px);
     font-stretch: expanded;
     letter-spacing: -2px;
     margin-bottom: 2px;

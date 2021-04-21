@@ -65,7 +65,7 @@ const CloseWindow = styled.button`
     border: 0px;
     box-shadow: rgb(0 0 0) -1px -1px 0px inset, rgb(255 255 255) 1px 1px 0px inset, rgb(134 138 142) -2px -2px 0px inset;
     outline: 0px;
-    filter: blur(0.3px);
+    //filter: blur(0.3px);
 `
 
 interface WindowHeaderProps {
