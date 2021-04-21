@@ -18,7 +18,7 @@ const DesktopObjectWrapper = styled.div`
     flex-direction: column;
     place-items: center;
     margin-bottom: 20px;
-}`
+`
 
 const DesktopObjectImg = styled.img `
 
