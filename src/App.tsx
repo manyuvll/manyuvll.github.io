@@ -1,7 +1,6 @@
 import { createGlobalStyle } from 'styled-components';
 import NavigationBar from './features/navbar/navigationBar/NavigationBar'
 import About from './pages/about/About'
-import styled from 'styled-components';
 import DesktopObjects from './features/desktopObject/DesktopObject'
 
 const Style = createGlobalStyle`
