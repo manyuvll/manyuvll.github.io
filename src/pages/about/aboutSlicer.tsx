@@ -6,7 +6,7 @@ export interface AboutState {
 }
 
 const initialState: AboutState = {
-    isOpened: false
+    isOpened: true
 }
 
 const aboutSlice = createSlice({
