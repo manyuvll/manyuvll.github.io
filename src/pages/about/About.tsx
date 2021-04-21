@@ -6,6 +6,11 @@ import WindowFooter from '../../features/window/windowFooter/WindowFooter'
 import Typewriter from 'react-simple-typewriter'
 import 'react-simple-typewriter/dist/index.css'
 import AvatarImg from '../../assets/picture/avatar.png'
+import { useAppDispatch } from '../../app/hooks';
+import { openAbout } from './aboutSlicer';
+
+
+
 
 const AboutWrapper = styled.div`
 color: rgb(255, 255, 255);
@@ -77,10 +82,11 @@ const Avatar = styled.img`
 `
 
 export default function About() {
-    
+    const dispatch = useAppDispatch()
+
     return(
         <WindowBody>
-            <WindowHeader title="AboutMe.txt" />
+            <WindowHeader title="AboutMe.txt" onClickClose={() => dispatch(openAbout())} />
             <WindowOptionsBar/>
             <AboutWrapper>
                 <AboutTextTitle>

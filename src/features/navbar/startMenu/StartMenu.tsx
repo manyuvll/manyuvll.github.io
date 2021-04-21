@@ -1,10 +1,11 @@
 import styled from 'styled-components';
 import restart from '../../../assets/icons/shut_down_normal-2.png'
-import AboutMe from '../../../assets/icons/notepad.png'
+import aboutMe from '../../../assets/icons/notepad.png'
 import contactFolder from '../../../assets/icons/contact-folder.png'
 import React, { useRef, useEffect } from "react";
 import { useAppDispatch } from '../../../app/hooks';
 import { click } from '../startButton/startButtonSlice';
+import { openAboutByItem } from '../../../pages/about/aboutSlicer'
 
 const StartMenuWrapper = styled.div`
     position: absolute;
@@ -120,6 +121,7 @@ interface StartMenuProps {
 }
 
 export default function StartMenu({ startButtonRef }: StartMenuProps) {
+    const dispatch = useAppDispatch();
     const wrapperRef = useRef(null);
     useOutsideAlerter(wrapperRef, startButtonRef);
 
@@ -135,8 +137,8 @@ export default function StartMenu({ startButtonRef }: StartMenuProps) {
                     <ItemTitle>Restart</ItemTitle>
                 </StartMenuItem>
                 <ItemSeparator/>
-                <StartMenuItem>
-                    <ItemIcon src={AboutMe}/>
+                <StartMenuItem onClick={() => dispatch(openAboutByItem()) && dispatch(click())}>
+                    <ItemIcon src={aboutMe}/>
                     <ItemTitle>AboutMe.txt</ItemTitle>
                 </StartMenuItem>
                 <StartMenuItem>

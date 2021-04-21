@@ -1,7 +1,9 @@
 import { createGlobalStyle } from 'styled-components';
 import NavigationBar from './features/navbar/navigationBar/NavigationBar'
 import About from './pages/about/About'
-import DesktopObjects from './features/desktopObject/DesktopObject'
+import DesktopObjects from './features/desktopObject/DesktopObjects'
+import { useAppSelector } from './app/hooks';
+import { selectAboutIsOpened } from './pages/about/aboutSlicer';
 
 const Style = createGlobalStyle`
   body, html  {
@@ -19,11 +21,13 @@ const Style = createGlobalStyle`
 `
 
 function App() {
+  const aboutIsOpened = useAppSelector(selectAboutIsOpened)
+
   return (
     <div className="App">
       <Style />
-        <DesktopObjects></DesktopObjects>
-      <About/>
+      <DesktopObjects/>
+      { aboutIsOpened && <About/>}
       <NavigationBar/>
     </div>
   );

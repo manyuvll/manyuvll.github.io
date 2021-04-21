@@ -1,6 +1,9 @@
 import styled from 'styled-components';
 import notePadIcon from '../../assets/icons/notepad.png'
 import contactFolder from '../../assets/icons/contact-folder.png'
+import { useAppDispatch } from '../../app/hooks';
+import { openAboutByItem } from '../../pages/about/aboutSlicer'
+
 
 const DesktopItems = styled.div`
  height: 50vh;
@@ -30,10 +33,12 @@ const DesktopObjectTitle = styled.div `
     margin-top: 5px;
 `
 
-export default function DesktopObject() {
+export default function DesktopObjects() {
+    const dispatch = useAppDispatch()
+
     return (
     <DesktopItems>
-        <DesktopObjectWrapper>
+        <DesktopObjectWrapper onClick={() => dispatch(openAboutByItem())}>
             <DesktopObjectImg src={notePadIcon}/>
             <DesktopObjectTitle>
                 AboutMe.txt
