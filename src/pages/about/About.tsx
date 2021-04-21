@@ -1,8 +1,8 @@
 import styled from 'styled-components';
-import WindowHeader from '../../features/windowHeader/WindowHeader'
-import WindowOptionsBar from '../../features/windowOptionsBar/WindowOptionsBar'
-import WindowBody from '../../features/windowBody/WindowBody'
-import WindowFooter from '../../features/windowFooter/WindowFooter'
+import WindowHeader from '../../features/window/windowHeader/WindowHeader'
+import WindowOptionsBar from '../../features/window/windowOptionsBar/WindowOptionsBar'
+import WindowBody from '../../features/window/windowBody/WindowBody'
+import WindowFooter from '../../features/window/windowFooter/WindowFooter'
 import Typewriter from 'react-simple-typewriter'
 import 'react-simple-typewriter/dist/index.css'
 import AvatarImg from '../../assets/picture/avatar.png'

@@ -1,6 +1,6 @@
 import styled from 'styled-components';
-import startLogo from '../../assets/icons/start-logo.svg'
-import { useAppSelector, useAppDispatch } from '../../app/hooks';
+import startLogo from '../../../assets/icons/start-logo.svg'
+import { useAppSelector, useAppDispatch } from '../../../app/hooks';
 
 import {
     click,

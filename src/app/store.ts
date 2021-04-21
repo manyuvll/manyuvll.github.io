@@ -1,6 +1,6 @@
 import { configureStore, ThunkAction, Action } from '@reduxjs/toolkit';
 import counterReducer from '../features/counter/counterSlice';
-import startButtonReducer from '../features/startButton/startButtonSlice';
+import startButtonReducer from '../features/navbar/startButton/startButtonSlice';
 
 export const store = configureStore({
   reducer: {

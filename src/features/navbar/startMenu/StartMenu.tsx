@@ -1,9 +1,9 @@
 import styled from 'styled-components';
-import restart from '../../assets/icons/shut_down_normal-2.png'
-import AboutMe from '../../assets/icons/notepad.png'
-import contactFolder from '../../assets/icons/contact-folder.png'
+import restart from '../../../assets/icons/shut_down_normal-2.png'
+import AboutMe from '../../../assets/icons/notepad.png'
+import contactFolder from '../../../assets/icons/contact-folder.png'
 import React, { useRef, useEffect, Ref } from "react";
-import { useAppDispatch } from '../../app/hooks';
+import { useAppDispatch } from '../../../app/hooks';
 import { click } from '../startButton/startButtonSlice';
 
 const StartMenuWrapper = styled.div`
@@ -58,7 +58,6 @@ const NinetyFiveSpan = styled.span`
 const StartMenuItemsList = styled.div`
     display: flex;
     width: 100%;
-    margin-left: 5px;
     flex-direction: column-reverse;
 `
 
@@ -67,6 +66,7 @@ const StartMenuItem = styled.div`
     display: flex;
     justify-content: start;
     align-items: center;
+    padding-left: 6px;
     &:hover {
         background-color: #000080;
         color: #cbcce5;

@@ -1,7 +1,7 @@
 import styled from 'styled-components';
-import clockIcon from '../../assets/icons/loudspeaker_rays-0.png'
+import clockIcon from '../../../assets/icons/loudspeaker_rays-0.png'
 import React, { useState, useEffect } from 'react';
-import { timeFormatter } from '../../helpers/time'
+import { timeFormatter } from '../../../helpers/time'
 
 const ClockWrapper = styled.div`
     border-bottom: 1px solid #f9f9f9;

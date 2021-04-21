@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import StartButton from '../startButton/StartButton'
 import StartMenu from '../startMenu/StartMenu'
 import Clock from '../clock/Clock'
-import { useAppSelector } from '../../app/hooks';
+import { useAppSelector } from '../../../app/hooks';
 import { selectIsClicked } from '../startButton/startButtonSlice';
 import React, { useRef } from "react";
 

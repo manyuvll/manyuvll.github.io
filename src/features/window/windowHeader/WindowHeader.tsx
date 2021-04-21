@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import aboutIcon from '../../assets/icons/msg_question-2.png'
+import aboutIcon from '../../../assets/icons/msg_question-2.png'
 
 const HeaderWrapper = styled.div`
     width: auto;
