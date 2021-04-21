@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 import restart from '../../assets/icons/shut_down_normal-2.png'
+import AboutMe from '../../assets/icons/notepad.png'
+import contactFolder from '../../assets/icons/contact-folder.png'
 import React, { useRef, useEffect, Ref } from "react";
 import { useAppDispatch } from '../../app/hooks';
 import { click } from '../startButton/startButtonSlice';
@@ -56,6 +58,7 @@ const NinetyFiveSpan = styled.span`
 const StartMenuItemsList = styled.div`
     display: flex;
     width: 100%;
+    margin-left: 5px;
     flex-direction: column-reverse;
 `
 
@@ -71,12 +74,12 @@ const StartMenuItem = styled.div`
 `
 
 const ItemIcon = styled.img`
-    height:2.5rem;
-    width: auto;
+
 `
 const ItemTitle = styled.span`
     font-family: 'win95_light';
     font-size: 0.6rem;
+    margin-left: 8px;
     &:first-letter {
         text-decoration:underline;
     }
@@ -133,28 +136,28 @@ export default function StartMenu({ startButtonRef }: StartMenuProps) {
                 </StartMenuItem>
                 <ItemSeparator/>
                 <StartMenuItem>
-                    <ItemIcon src={restart}/>
-                    <ItemTitle>Restart</ItemTitle>
+                    <ItemIcon src={AboutMe}/>
+                    <ItemTitle>AboutMe.txt</ItemTitle>
+                </StartMenuItem>
+                <StartMenuItem>
+                    <ItemIcon src={contactFolder}/>
+                    <ItemTitle>Contact</ItemTitle>
                 </StartMenuItem>
                 <StartMenuItem>
                     <ItemIcon src={restart}/>
-                    <ItemTitle>Restart</ItemTitle>
+                    <ItemTitle>WIP</ItemTitle>
                 </StartMenuItem>
                 <StartMenuItem>
                     <ItemIcon src={restart}/>
-                    <ItemTitle>Restart</ItemTitle>
+                    <ItemTitle>WIP</ItemTitle>
                 </StartMenuItem>
                 <StartMenuItem>
                     <ItemIcon src={restart}/>
-                    <ItemTitle>Restart</ItemTitle>
+                    <ItemTitle>WIP</ItemTitle>
                 </StartMenuItem>
                 <StartMenuItem>
                     <ItemIcon src={restart}/>
-                    <ItemTitle>Restart</ItemTitle>
-                </StartMenuItem>
-                <StartMenuItem>
-                    <ItemIcon src={restart}/>
-                    <ItemTitle>Restart</ItemTitle>
+                    <ItemTitle>WIP</ItemTitle>
                 </StartMenuItem>
             </StartMenuItemsList>
         </StartMenuWrapper>

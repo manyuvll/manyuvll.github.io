@@ -74,7 +74,7 @@ interface WindowHeaderProps {
 
 export default function WindowHeader(props: WindowHeaderProps) {
     return(
-        <HeaderWrapper>
+        <HeaderWrapper className="draggable-custom">
             <LogoImg src={aboutIcon}/>
             <>{props.title}</>
             <GroupButton>           

@@ -21,7 +21,7 @@ export interface WindowProps  {
 
 export default function WindowBody(props: WindowProps) {
     return(
-        <Draggable defaultPosition={{x: 30, y: 100}}>
+        <Draggable handle=".draggable-custom" defaultPosition={{x: 230, y: 100}}>
             <WindowBodyWrapper>
                 {props.children}
             </WindowBodyWrapper>
