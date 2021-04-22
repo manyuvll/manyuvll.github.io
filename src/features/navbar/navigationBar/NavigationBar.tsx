@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import StartButton from '../startButton/StartButton'
 import StartMenu from '../startMenu/StartMenu'
+import OpenedWindows from '../openedWindows/OpenedWindows'
 import Clock from '../clock/Clock'
 import { useAppSelector } from '../../../app/hooks';
 import { selectIsClicked } from '../startButton/startButtonSlice';
@@ -33,6 +34,7 @@ export default function NavigationBar() {
         <NavBar>
             <StartButton startButtonRef={buttonRef}/>
             { isStartButtonClicked ? <StartMenu startButtonRef={buttonRef} /> : ''}
+            <OpenedWindows></OpenedWindows>
             <Clock/>
         </NavBar>
     )

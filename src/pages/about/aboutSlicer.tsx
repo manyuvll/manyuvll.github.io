@@ -3,27 +3,34 @@ import { RootState } from '../../app/store';
 
 export interface AboutState {
     isOpened: boolean
+    isVisible: boolean
 }
 
 const initialState: AboutState = {
-    isOpened: true
+    isOpened: true,
+    isVisible: true
 }
 
 const aboutSlice = createSlice({
     name: 'about',
     initialState,
     reducers: {
-        openAbout: (state) => {
-            state.isOpened = !state.isOpened
+        closeAbout: (state) => {
+            state.isOpened = false
+            state.isVisible = false
         },
         openAboutByItem: (state) => {
             state.isOpened = true
+            state.isVisible = true
+        },
+        minimize: (state) => {
+            state.isVisible = false
         }
     }
 
 })
 
-export const { openAbout, openAboutByItem } = aboutSlice.actions;
+export const { closeAbout, openAboutByItem, minimize } = aboutSlice.actions;
 export const selectAboutIsOpened = (state: RootState) => state.about.isOpened;
 
 export default aboutSlice.reducer;
