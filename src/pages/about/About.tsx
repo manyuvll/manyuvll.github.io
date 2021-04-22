@@ -114,7 +114,7 @@ export default function About() {
                             After my 2 years full-stack engineer experience in France, I decided to move to Tokyo. <br/> While enjoying my new life here I'm also looking for the perfect fitting job that will let me express my potential.
                             <br/>
                             <br/>
-                            I love working on web or mobile apps and strive to make every project I work on a succes and enjoyed by the user.
+                            I love working on web or mobile apps and strive to make every project I work on a success and enjoyed by the user.
                         </AboutText>
                     </Column>
                     <Column>
