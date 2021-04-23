@@ -1,9 +1,10 @@
 import { createGlobalStyle } from 'styled-components';
 import NavigationBar from './features/navbar/navigationBar/NavigationBar'
 import About from './pages/about/About'
+import Curriculum from './pages/curriculum/Curriculum'
 import DesktopObjects from './features/desktopObject/DesktopObjects'
 import { useAppSelector } from './app/hooks';
-import { selectAboutPage } from './pages/pagesSlicer';
+import { selectAboutPage, selectCurriculumPage } from './pages/pagesSlicer';
 
 const Style = createGlobalStyle`
   body, html  {
@@ -22,12 +23,14 @@ const Style = createGlobalStyle`
 
 function App() {
   const aboutPage = useAppSelector(selectAboutPage)
+  const curriculumPage = useAppSelector(selectCurriculumPage)
 
   return (
     <div className="App">
       <Style />
       <DesktopObjects/>
       { aboutPage && !aboutPage.isMinimized && <About/>}
+      { curriculumPage && !curriculumPage.isMinimized && <Curriculum/>}
       <NavigationBar/>
     </div>
   );

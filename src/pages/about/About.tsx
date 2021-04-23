@@ -19,6 +19,7 @@ color: rgb(255, 255, 255);
     flex-direction: column;
     margin: 3px;
     height: 96%;
+    width: 50rem;
     border-width: 2px;
     border-bottom: 1px solid white;
     border-right: 1px solid white;
@@ -87,7 +88,7 @@ export default function About() {
 
     return(
         <WindowBody>
-            <WindowHeader title={ABOUT.title} onClickClose={() => dispatch(closePage(ABOUT.title))} onClickMinimize={() => dispatch(minimizePage(ABOUT.title))} />
+            <WindowHeader title={ABOUT.title} icon={ABOUT.icon} onClickClose={() => dispatch(closePage(ABOUT.title))} onClickMinimize={() => dispatch(minimizePage(ABOUT.title))} />
             <WindowOptionsBar/>
             <AboutWrapper>
                 <AboutTextTitle>

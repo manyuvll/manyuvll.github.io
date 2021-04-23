@@ -1,6 +1,6 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { RootState } from '../app/store';
-import { Page, ABOUT } from './pagesTypes'
+import { Page, ABOUT, CURRICULUM } from './pagesTypes'
 
 
 export interface pagesState {
@@ -38,5 +38,6 @@ const pagesSlice = createSlice({
 export const { openPage, closePage, minimizePage, maximizeOrMinimizePage} = pagesSlice.actions;
 export const selectAllPages = (state: RootState) => state.pages.pages;
 export const selectAboutPage = (state: RootState) => state.pages.pages.filter(value => value?.title === ABOUT.title).pop();
+export const selectCurriculumPage = (state: RootState) => state.pages.pages.filter(value => value?.title === CURRICULUM.title).pop();
 
 export default pagesSlice.reducer;

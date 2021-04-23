@@ -64,7 +64,7 @@ export default function OpenedWindows() {
     <OpenedWindowsWrapper>
         {
             openedPages.map(page => (
-                <OpenedWindowsItem isMinimized={page.isMinimized} onClick={() => dispatch(maximizeOrMinimizePage(page.title))}>
+                <OpenedWindowsItem key={page.title} isMinimized={page.isMinimized} onClick={() => dispatch(maximizeOrMinimizePage(page.title))}>
                     <LogoImg src={page.icon}/>
                     <TabText>{page.title}</TabText>
                 </OpenedWindowsItem>

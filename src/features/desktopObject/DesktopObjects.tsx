@@ -1,8 +1,7 @@
 import styled from 'styled-components';
-import notePadIcon from '../../assets/icons/notepad.png'
 import contactFolder from '../../assets/icons/contact-folder.png'
 import { useAppDispatch } from '../../app/hooks';
-import { ABOUT } from '../../pages/pagesTypes'
+import { ABOUT, CURRICULUM } from '../../pages/pagesTypes'
 import { openPage } from '../../pages/pagesSlicer'
 
 const DesktopItems = styled.div`
@@ -39,9 +38,15 @@ export default function DesktopObjects() {
     return (
     <DesktopItems>
         <DesktopObjectWrapper onClick={() => dispatch(openPage(ABOUT))}>
-            <DesktopObjectImg src={notePadIcon}/>
+            <DesktopObjectImg src={ABOUT.icon}/>
             <DesktopObjectTitle>
-                AboutMe.txt
+                {ABOUT.title}
+            </DesktopObjectTitle>
+        </DesktopObjectWrapper>
+        <DesktopObjectWrapper onClick={() => dispatch(openPage(CURRICULUM))}>
+            <DesktopObjectImg src={CURRICULUM.icon}/>
+            <DesktopObjectTitle>
+                {CURRICULUM.title}
             </DesktopObjectTitle>
         </DesktopObjectWrapper>
         <DesktopObjectWrapper>

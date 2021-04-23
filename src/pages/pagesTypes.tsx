@@ -1,4 +1,5 @@
 import aboutIcon from '../assets/icons/notepad.png'
+import curriculumIcon from '../assets/icons/curriculumIcon.png'
 
 export interface Page {
     title: string,
@@ -9,5 +10,13 @@ export interface Page {
 export const ABOUT = {
     title: "AboutMe.txt",
     icon: aboutIcon,
-    isMinimized: false
+    isMinimized: false,
+    width: '30rem'
+}
+
+export const CURRICULUM = {
+    title: "Curriculum.pdf",
+    icon: curriculumIcon,
+    isMinimized: false,
+    width: "fit-content"
 }

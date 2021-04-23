@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import Draggable from 'react-draggable';
 
 const WindowBodyWrapper = styled.div`
-    width: 50rem;
+    width: fit-content;
     height: 30rem;
     background-color: #bfc6c8;
     border-radius: 1px;

@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import aboutIcon from '../../../assets/icons/msg_question-2.png'
 
 const HeaderWrapper = styled.div`
     width: auto;
@@ -69,7 +68,8 @@ const CloseWindow = styled.button`
 `
 
 interface WindowHeaderProps {
-    title: String
+    title: string
+    icon: string
     onClickClose: Function
     onClickMinimize: Function 
 }
@@ -77,7 +77,7 @@ interface WindowHeaderProps {
 export default function WindowHeader(props: WindowHeaderProps) {
     return(
         <HeaderWrapper className="draggable-custom">
-            <LogoImg src={aboutIcon}/>
+            <LogoImg src={props.icon}/>
             <>{props.title}</>
             <GroupButton>           
                 <MinimizeWindow onClick={() => props.onClickMinimize(props.title)}/>
