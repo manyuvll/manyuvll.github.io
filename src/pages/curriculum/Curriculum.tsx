@@ -1,4 +1,4 @@
-import react, { useState } from 'react';
+import { useState } from 'react';
 import styled from 'styled-components';
 import WindowHeader from '../../features/window/windowHeader/WindowHeader'
 import WindowOptionsBar from '../../features/window/windowOptionsBar/WindowOptionsBar'
@@ -8,7 +8,7 @@ import { useAppDispatch } from '../../app/hooks';
 import { CURRICULUM } from '../pagesTypes'
 import { closePage, minimizePage } from '../pagesSlicer';
 import { Document, Page } from 'react-pdf/dist/esm/entry.webpack';
-import curriculumPDF from '../../assets/pdf/EmanueleVellaResume_FrontEnd.pdf'
+import curriculumPDF from '../../assets/pdf/resume.pdf'
 
 
 
