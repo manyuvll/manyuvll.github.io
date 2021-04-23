@@ -2,8 +2,8 @@ import styled from 'styled-components';
 import notePadIcon from '../../assets/icons/notepad.png'
 import contactFolder from '../../assets/icons/contact-folder.png'
 import { useAppDispatch } from '../../app/hooks';
-import { openAboutByItem } from '../../pages/about/aboutSlicer'
-
+import { ABOUT } from '../../pages/pagesTypes'
+import { openPage } from '../../pages/pagesSlicer'
 
 const DesktopItems = styled.div`
  height: 50vh;
@@ -38,7 +38,7 @@ export default function DesktopObjects() {
 
     return (
     <DesktopItems>
-        <DesktopObjectWrapper onClick={() => dispatch(openAboutByItem())}>
+        <DesktopObjectWrapper onClick={() => dispatch(openPage(ABOUT))}>
             <DesktopObjectImg src={notePadIcon}/>
             <DesktopObjectTitle>
                 AboutMe.txt

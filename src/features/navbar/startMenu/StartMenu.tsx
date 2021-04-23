@@ -5,7 +5,8 @@ import contactFolder from '../../../assets/icons/contact-folder.png'
 import React, { useRef, useEffect } from "react";
 import { useAppDispatch } from '../../../app/hooks';
 import { click } from '../startButton/startButtonSlice';
-import { openAboutByItem } from '../../../pages/about/aboutSlicer'
+import { openPage } from '../../../pages/pagesSlicer'
+import { ABOUT } from '../../../pages/pagesTypes'
 
 const StartMenuWrapper = styled.div`
     position: absolute;
@@ -137,7 +138,7 @@ export default function StartMenu({ startButtonRef }: StartMenuProps) {
                     <ItemTitle>Restart</ItemTitle>
                 </StartMenuItem>
                 <ItemSeparator/>
-                <StartMenuItem onClick={() => dispatch(openAboutByItem()) && dispatch(click())}>
+                <StartMenuItem onClick={() => dispatch(openPage(ABOUT)) && dispatch(click())}>
                     <ItemIcon src={aboutMe}/>
                     <ItemTitle>AboutMe.txt</ItemTitle>
                 </StartMenuItem>

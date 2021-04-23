@@ -7,7 +7,8 @@ import Typewriter from 'react-simple-typewriter'
 import 'react-simple-typewriter/dist/index.css'
 import AvatarImg from '../../assets/picture/avatar.png'
 import { useAppDispatch } from '../../app/hooks';
-import { closeAbout, minimize } from './aboutSlicer';
+import { ABOUT } from '../pagesTypes'
+import { closePage, minimizePage } from '../pagesSlicer';
 
 
 
@@ -86,7 +87,7 @@ export default function About() {
 
     return(
         <WindowBody>
-            <WindowHeader title="AboutMe.txt" onClickClose={() => dispatch(closeAbout())} onClickMinimize={() => dispatch(minimize())} />
+            <WindowHeader title={ABOUT.title} onClickClose={() => dispatch(closePage(ABOUT.title))} onClickMinimize={() => dispatch(minimizePage(ABOUT.title))} />
             <WindowOptionsBar/>
             <AboutWrapper>
                 <AboutTextTitle>

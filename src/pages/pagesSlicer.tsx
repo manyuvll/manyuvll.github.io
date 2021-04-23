@@ -4,16 +4,11 @@ import { Page, ABOUT } from './pagesTypes'
 
 
 export interface pagesState {
-    pagesState: Map<string, Page>
+    pages: Array<Page>
 }
 
 const initialState: pagesState = {
-    pagesState: new Map<string, Page>().set(ABOUT.title, {
-        title: ABOUT.title,
-        icon: ABOUT.icon,
-        isOpened: true,
-        isMinimized: false
-    })
+    pages: []
 }
 
 const pagesSlice = createSlice({
@@ -21,24 +16,27 @@ const pagesSlice = createSlice({
     initialState,
     reducers: {
         openPage: (state, action: PayloadAction<Page>) => {
-            state.pagesState.set(action.payload.title, action.payload)
+            const isAlreadyOpened = state.pages.find(page => page.title === action.payload.title)
+            if(!isAlreadyOpened) {
+                 state.pages.push(action.payload)
+            } else {
+                isAlreadyOpened.isMinimized = false
+            }
         },
         closePage: (state, action: PayloadAction<string>) => {
-            state.pagesState.delete(action.payload)
+            state.pages = state.pages.filter(page => page?.title !== action.payload)
         },
         minimizePage: (state, action: PayloadAction<string>) => {
-            const page = state.pagesState.get(action.payload)
-            if (page) page.isMinimized = true
+            state.pages = state.pages.map(page => page.title === action.payload ? {...page, isMinimized: true } : page)
         },
-        maximizePage: (state, action: PayloadAction<string>) => {
-            const page = state.pagesState.get(action.payload)
-            if (page) page.isMinimized = false
+        maximizeOrMinimizePage: (state, action: PayloadAction<string>) => {
+            state.pages = state.pages.map(page => page.title === action.payload ? {...page, isMinimized: !page.isMinimized } : page)
         }
     }
 })
 
-export const { openPage, closePage, minimizePage, maximizePage} = pagesSlice.actions;
-export const selectAllPages = (state: RootState) => state.pages.pagesState.values;
-export const selectAboutPage = (state: RootState) => state.pages.pagesState.get(ABOUT.title);
+export const { openPage, closePage, minimizePage, maximizeOrMinimizePage} = pagesSlice.actions;
+export const selectAllPages = (state: RootState) => state.pages.pages;
+export const selectAboutPage = (state: RootState) => state.pages.pages.filter(value => value?.title === ABOUT.title).pop();
 
 export default pagesSlice.reducer;

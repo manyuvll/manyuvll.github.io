@@ -69,9 +69,9 @@ const CloseWindow = styled.button`
 `
 
 interface WindowHeaderProps {
-    title: String;
+    title: String
     onClickClose: Function
-    onClickMinimize: Function
+    onClickMinimize: Function 
 }
 
 export default function WindowHeader(props: WindowHeaderProps) {
@@ -80,9 +80,9 @@ export default function WindowHeader(props: WindowHeaderProps) {
             <LogoImg src={aboutIcon}/>
             <>{props.title}</>
             <GroupButton>           
-                <MinimizeWindow onClick={() => props.onClickMinimize()}/>
+                <MinimizeWindow onClick={() => props.onClickMinimize(props.title)}/>
                 <FullScreenWindow/>
-                <CloseWindow onClick={() => props.onClickClose()}/>
+                <CloseWindow onClick={() => props.onClickClose(props.title)}/>
             </GroupButton>
 
         </HeaderWrapper>
