@@ -8,7 +8,7 @@ export interface pagesState {
 }
 
 const initialState: pagesState = {
-    pages: []
+    pages: [ABOUT]
 }
 
 const pagesSlice = createSlice({
