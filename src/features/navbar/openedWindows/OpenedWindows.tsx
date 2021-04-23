@@ -1,4 +1,3 @@
-import { Interface } from 'node:readline';
 import styled from 'styled-components'
 import { useAppSelector , useAppDispatch} from '../../../app/hooks';
 import { selectAllPages, maximizeOrMinimizePage } from '../../../pages/pagesSlicer';
