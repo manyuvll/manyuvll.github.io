@@ -21,6 +21,7 @@ const pagesSlice = createSlice({
                  state.pages.push(action.payload)
             } else {
                 isAlreadyOpened.isMinimized = false
+                isAlreadyOpened.zIndex = '3'
             }
         },
         closePage: (state, action: PayloadAction<string>) => {
