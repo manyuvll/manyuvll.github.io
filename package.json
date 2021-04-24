@@ -2,6 +2,7 @@
   "name": "win95portfolio",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://manyuvll.github.io/win95portfolio/",
   "dependencies": {
     "@reduxjs/toolkit": "^1.5.1",
     "@testing-library/jest-dom": "^4.2.4",
