@@ -34,7 +34,7 @@ const CurriculumWrapper = styled.div`
   
 export default function About() {
     const dispatch = useAppDispatch()
-    const [pageNumber, setPageNumber] = useState(1);
+    const [pageNumber] = useState(1);
 
     return(
         <WindowBody>
