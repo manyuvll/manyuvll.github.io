@@ -16,7 +16,7 @@
 
 ### ✨ [Demo](https://manyuvll.github.io/windows95Portfolio/)
 
-<img alt="Screenshot" src="https://media.discordapp.net/attachments/625998454610460672/835454932185645066/Capture_decran_2021-04-24_a_18.59.09.png" width="40%" height="40%" />
+<img alt="Screenshot" src="https://media.discordapp.net/attachments/625998454610460672/835454932185645066/Capture_decran_2021-04-24_a_18.59.09.png"/>
 
 ## Install
 
