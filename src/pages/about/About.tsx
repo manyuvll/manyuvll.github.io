@@ -6,9 +6,9 @@ import WindowFooter from '../../features/window/windowFooter/WindowFooter'
 import Typewriter from 'react-simple-typewriter'
 import 'react-simple-typewriter/dist/index.css'
 import AvatarImg from '../../assets/picture/avatar.png'
-import { useAppDispatch } from '../../app/hooks';
+import { useAppDispatch, useAppSelector } from '../../app/hooks';
 import { ABOUT } from '../pagesTypes'
-import { closePage, minimizePage } from '../pagesSlicer';
+import { closePage, minimizePage, focusPage, selectAboutPageZIndex } from '../pagesSlicer';
 
 
 
@@ -87,7 +87,7 @@ export default function About() {
     const dispatch = useAppDispatch()
 
     return(
-        <WindowBody>
+        <WindowBody pageZIndex={useAppSelector(selectAboutPageZIndex) || "1"} onClick={() => dispatch(focusPage(ABOUT.title))}>
             <WindowHeader title={ABOUT.title} icon={ABOUT.icon} onClickClose={() => dispatch(closePage(ABOUT.title))} onClickMinimize={() => dispatch(minimizePage(ABOUT.title))} />
             <WindowOptionsBar/>
             <AboutWrapper>

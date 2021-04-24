@@ -31,13 +31,20 @@ const pagesSlice = createSlice({
         },
         maximizeOrMinimizePage: (state, action: PayloadAction<string>) => {
             state.pages = state.pages.map(page => page.title === action.payload ? {...page, isMinimized: !page.isMinimized } : page)
+        },
+        focusPage: (state, action: PayloadAction<string>) => {
+            state.pages = state.pages.map(page => page.title === action.payload ? {...page, zIndex: '2' } : page.title !== action.payload && parseInt(page.zIndex) > 1 ? {...page, zIndex: '1' } : page)
         }
     }
 })
 
-export const { openPage, closePage, minimizePage, maximizeOrMinimizePage} = pagesSlice.actions;
+export const { openPage, closePage, minimizePage, maximizeOrMinimizePage, focusPage } = pagesSlice.actions;
 export const selectAllPages = (state: RootState) => state.pages.pages;
+
 export const selectAboutPage = (state: RootState) => state.pages.pages.filter(value => value?.title === ABOUT.title).pop();
+export const selectAboutPageZIndex = (state: RootState) => state.pages.pages.filter(value => value?.title === ABOUT.title).pop()?.zIndex;
+
 export const selectCurriculumPage = (state: RootState) => state.pages.pages.filter(value => value?.title === CURRICULUM.title).pop();
+export const selectCurriculumPageZIndex = (state: RootState) => state.pages.pages.filter(value => value?.title === CURRICULUM.title).pop()?.zIndex;
 
 export default pagesSlice.reducer;

@@ -4,9 +4,9 @@ import WindowHeader from '../../features/window/windowHeader/WindowHeader'
 import WindowOptionsBar from '../../features/window/windowOptionsBar/WindowOptionsBar'
 import WindowBody from '../../features/window/windowBody/WindowBody'
 import WindowFooter from '../../features/window/windowFooter/WindowFooter'
-import { useAppDispatch } from '../../app/hooks';
+import { useAppDispatch, useAppSelector } from '../../app/hooks';
 import { CURRICULUM } from '../pagesTypes'
-import { closePage, minimizePage } from '../pagesSlicer';
+import { closePage, minimizePage, focusPage, selectCurriculumPageZIndex } from '../pagesSlicer';
 import { Document, Page } from 'react-pdf/dist/esm/entry.webpack';
 import curriculumPDF from '../../assets/pdf/resume.pdf'
 
@@ -37,7 +37,7 @@ export default function About() {
     const [pageNumber] = useState(1);
 
     return(
-        <WindowBody>
+        <WindowBody pageZIndex={useAppSelector(selectCurriculumPageZIndex) || "1"} onClick={() => dispatch(focusPage(CURRICULUM.title))}>
             <WindowHeader title={CURRICULUM.title} icon={CURRICULUM.icon} onClickClose={() => dispatch(closePage(CURRICULUM.title))} onClickMinimize={() => dispatch(minimizePage(CURRICULUM.title))} />
             <WindowOptionsBar/>
             <CurriculumWrapper>

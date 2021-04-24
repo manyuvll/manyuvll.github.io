@@ -1,6 +1,10 @@
 import styled from 'styled-components';
 import Draggable from 'react-draggable';
 
+interface WindowBodyWrapperProps {
+    zIndex: string
+}
+
 const WindowBodyWrapper = styled.div`
     width: fit-content;
     height: 30rem;
@@ -13,16 +17,20 @@ const WindowBodyWrapper = styled.div`
     position: absolute;
     display: flex;
     flex-direction: column;
+    z-index: ${(props: WindowBodyWrapperProps) => props.zIndex}
 `
 
 export interface WindowProps  { 
     children: React.ReactNode
+    onClick: () => void
+    pageZIndex: string
  }
 
 export default function WindowBody(props: WindowProps) {
+
     return(
         <Draggable handle=".draggable-custom" defaultPosition={{x: 230, y: 100}}>
-            <WindowBodyWrapper>
+            <WindowBodyWrapper zIndex={props.pageZIndex} onClick={() => props.onClick()}>
                 {props.children}
             </WindowBodyWrapper>
         </Draggable>
