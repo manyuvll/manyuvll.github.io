@@ -59,7 +59,6 @@ const TabText = styled.span`
 export default function OpenedWindows() {
     const openedPages: Array<Page> = useAppSelector(selectAllPages)
     const dispatch = useAppDispatch()
-    console.log(openedPages)
     return (
     <OpenedWindowsWrapper>
         {

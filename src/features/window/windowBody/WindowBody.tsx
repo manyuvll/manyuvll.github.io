@@ -29,8 +29,8 @@ export interface WindowProps  {
 export default function WindowBody(props: WindowProps) {
 
     return(
-        <Draggable handle=".draggable-custom" defaultPosition={{x: 230, y: 100}}>
-            <WindowBodyWrapper zIndex={props.pageZIndex} onClick={() => props.onClick()}>
+        <Draggable onMouseDown={() => props.onClick()} handle=".draggable-custom" defaultPosition={{x: 230, y: 100}}>
+            <WindowBodyWrapper zIndex={props.pageZIndex}>
                 {props.children}
             </WindowBodyWrapper>
         </Draggable>

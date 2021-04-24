@@ -24,6 +24,7 @@ box-sizing: border-box;
 display: flex;
 align-items: center;
 padding-right:4px;
+z-index: 999
 `
 
 export default function NavigationBar() {
