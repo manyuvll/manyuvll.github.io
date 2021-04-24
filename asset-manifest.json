@@ -1,0 +1,30 @@
+{
+  "files": {
+    "main.css": "/win95portfolio/static/css/main.9b23480f.chunk.css",
+    "main.js": "/win95portfolio/static/js/main.5b60599e.chunk.js",
+    "main.js.map": "/win95portfolio/static/js/main.5b60599e.chunk.js.map",
+    "runtime-main.js": "/win95portfolio/static/js/runtime-main.6858df6e.js",
+    "runtime-main.js.map": "/win95portfolio/static/js/runtime-main.6858df6e.js.map",
+    "static/css/2.a97733c1.chunk.css": "/win95portfolio/static/css/2.a97733c1.chunk.css",
+    "static/js/2.df479d3d.chunk.js": "/win95portfolio/static/js/2.df479d3d.chunk.js",
+    "static/js/2.df479d3d.chunk.js.map": "/win95portfolio/static/js/2.df479d3d.chunk.js.map",
+    "index.html": "/win95portfolio/index.html",
+    "static/css/2.a97733c1.chunk.css.map": "/win95portfolio/static/css/2.a97733c1.chunk.css.map",
+    "static/css/main.9b23480f.chunk.css.map": "/win95portfolio/static/css/main.9b23480f.chunk.css.map",
+    "static/js/2.df479d3d.chunk.js.LICENSE.txt": "/win95portfolio/static/js/2.df479d3d.chunk.js.LICENSE.txt",
+    "static/js/pdf.worker.entry.6b107c39.worker.js": "/win95portfolio/static/js/pdf.worker.entry.6b107c39.worker.js",
+    "static/js/pdf.worker.entry.6b107c39.worker.js.LICENSE.txt": "/win95portfolio/static/js/pdf.worker.entry.6b107c39.worker.js.LICENSE.txt",
+    "static/js/pdf.worker.entry.6b107c39.worker.js.map": "/win95portfolio/static/js/pdf.worker.entry.6b107c39.worker.js.map",
+    "static/media/index.css": "/win95portfolio/static/media/w95fa.fb426abf.woff2",
+    "static/media/avatar.37635aba.png": "/win95portfolio/static/media/avatar.37635aba.png",
+    "static/media/resume.a23207d9.pdf": "/win95portfolio/static/media/resume.a23207d9.pdf",
+    "static/media/start-logo.158a52e7.svg": "/win95portfolio/static/media/start-logo.158a52e7.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.6858df6e.js",
+    "static/css/2.a97733c1.chunk.css",
+    "static/js/2.df479d3d.chunk.js",
+    "static/css/main.9b23480f.chunk.css",
+    "static/js/main.5b60599e.chunk.js"
+  ]
+}
