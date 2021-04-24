@@ -1,11 +1,12 @@
 <h1 align="center">Welcome to Win95-Portfolio 👋</h1>
 <p>
+  <img alt="build" src="https://github.com/github/docs/actions/workflows/main.yml/badge.svg" />
   <img alt="Version" src="https://img.shields.io/badge/version-0.1.0-blue.svg?cacheSeconds=2592000" />
   <a href="#" target="_blank">
     <img alt="License: MIT" src="https://img.shields.io/badge/License-MIT-yellow.svg" />
   </a>
   <a href="https://twitter.com/manu\_vll" target="_blank">
-    <img alt="Twitter: manu\_vll" src="https://img.shields.io/twitter/follow/manu\_vll.svg?style=social" />
+    <img alt="Twitter: manu_vll" src="https://img.shields.io/twitter/follow/manu\_vll.svg?style=social" />
   </a>
 </p>
 
@@ -13,7 +14,7 @@
 > Used ReactJS /w hooks + Redux and handmade CSS.
 > This project is still WIP. ⚠️
 
-### ✨ [Demo](https://emanuele.vercel.app/)
+### ✨ [Demo](https://manyuvll.github.io/windows95Portfolio/)
 
 ## Install
 
