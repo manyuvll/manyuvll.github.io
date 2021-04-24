@@ -1,12 +1,11 @@
 import styled from 'styled-components';
 import restart from '../../../assets/icons/shut_down_normal-2.png'
-import aboutMe from '../../../assets/icons/notepad.png'
 import contactFolder from '../../../assets/icons/contact-folder.png'
 import React, { useRef, useEffect } from "react";
 import { useAppDispatch } from '../../../app/hooks';
 import { click } from '../startButton/startButtonSlice';
 import { openPage } from '../../../pages/pagesSlicer'
-import { ABOUT } from '../../../pages/pagesTypes'
+import { ABOUT, CURRICULUM } from '../../../pages/pagesTypes'
 
 const StartMenuWrapper = styled.div`
     position: absolute;
@@ -139,16 +138,16 @@ export default function StartMenu({ startButtonRef }: StartMenuProps) {
                 </StartMenuItem>
                 <ItemSeparator/>
                 <StartMenuItem onClick={() => dispatch(openPage(ABOUT)) && dispatch(click())}>
-                    <ItemIcon src={aboutMe}/>
-                    <ItemTitle>AboutMe.txt</ItemTitle>
+                    <ItemIcon src={ABOUT.icon}/>
+                    <ItemTitle>{ABOUT.title}</ItemTitle>
+                </StartMenuItem>
+                <StartMenuItem onClick={() => dispatch(openPage(CURRICULUM)) && dispatch(click())}>
+                    <ItemIcon src={CURRICULUM.icon}/>
+                    <ItemTitle>{CURRICULUM.title}</ItemTitle>
                 </StartMenuItem>
                 <StartMenuItem>
                     <ItemIcon src={contactFolder}/>
                     <ItemTitle>Contact</ItemTitle>
-                </StartMenuItem>
-                <StartMenuItem>
-                    <ItemIcon src={restart}/>
-                    <ItemTitle>WIP</ItemTitle>
                 </StartMenuItem>
                 <StartMenuItem>
                     <ItemIcon src={restart}/>
