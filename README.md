@@ -1,6 +1,6 @@
 <h1 align="center">Welcome to Win95-Portfolio 👋</h1>
 <p>
-  <img alt="build" src="https://github.com/manyuvll/windows95Portfolio/actions/workflows/main.yml/badge.svg" />
+  <img alt="build" src="https://github.com/manyuvll/windows95Portfolio/actions/workflows/build-deploy/badge.svg" />
   <img alt="Version" src="https://img.shields.io/badge/version-0.1.0-blue.svg?cacheSeconds=2592000" />
   <a href="#" target="_blank">
     <img alt="License: MIT" src="https://img.shields.io/badge/License-MIT-yellow.svg" />
