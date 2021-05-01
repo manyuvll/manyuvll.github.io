@@ -1,6 +1,6 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { RootState } from '../app/store';
-import { Page, ABOUT, CURRICULUM } from './pagesTypes'
+import { Page, ABOUT, CURRICULUM, CONTACTME } from './pagesTypes'
 
 
 export interface pagesState {
@@ -16,13 +16,12 @@ const pagesSlice = createSlice({
     initialState,
     reducers: {
         openPage: (state, action: PayloadAction<Page>) => {
-            const isAlreadyOpened = state.pages.find(page => page.title === action.payload.title)
-            if(!isAlreadyOpened) {
-                 state.pages.push(action.payload)
+            if(state.pages.length === 0) state.pages.push(action.payload)
+            else if (state.pages.some(page => page.title === action.payload.title)) {
+                state.pages = state.pages.map(page => page.title === action.payload.title ? {...page, isMinimized: false, zIndex: Math.max(...state.pages.map(page => page.zIndex), 0) + 1} : page)
             } else {
-                isAlreadyOpened.isMinimized = false
-                isAlreadyOpened.zIndex = '3'
-            }
+                state.pages.push({...action.payload, isMinimized: false, zIndex: Math.max(...state.pages.map(page => page.zIndex), 0)  + 1})
+            }   
         },
         closePage: (state, action: PayloadAction<string>) => {
             state.pages = state.pages.filter(page => page?.title !== action.payload)
@@ -34,7 +33,7 @@ const pagesSlice = createSlice({
             state.pages = state.pages.map(page => page.title === action.payload ? {...page, isMinimized: !page.isMinimized } : page)
         },
         focusPage: (state, action: PayloadAction<string>) => {
-            state.pages = state.pages.map(page => page.title === action.payload ? {...page, zIndex: '2' } : page.title !== action.payload && parseInt(page.zIndex) > 1 ? {...page, zIndex: '1' } : page)
+            state.pages = state.pages.map(page => page.title === action.payload ? {...page, isMinimized: false, zIndex: Math.max(...state.pages.map(page => page.zIndex), 0)} : page)
         }
     }
 })
@@ -47,5 +46,8 @@ export const selectAboutPageZIndex = (state: RootState) => state.pages.pages.fil
 
 export const selectCurriculumPage = (state: RootState) => state.pages.pages.filter(value => value?.title === CURRICULUM.title).pop();
 export const selectCurriculumPageZIndex = (state: RootState) => state.pages.pages.filter(value => value?.title === CURRICULUM.title).pop()?.zIndex;
+
+export const selectContactMePage = (state: RootState) => state.pages.pages.filter(value => value?.title === CONTACTME.title).pop();
+export const selectContactMePageZIndex = (state: RootState) => state.pages.pages.filter(value => value?.title === CONTACTME.title).pop()?.zIndex;
 
 export default pagesSlice.reducer;

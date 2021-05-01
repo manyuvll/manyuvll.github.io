@@ -87,7 +87,7 @@ export default function About() {
     const dispatch = useAppDispatch()
 
     return(
-        <WindowBody pageZIndex={useAppSelector(selectAboutPageZIndex) || "1"} onClick={() => dispatch(focusPage(ABOUT.title))}>
+        <WindowBody pageZIndex={useAppSelector(selectAboutPageZIndex) || 1} onClick={() => dispatch(focusPage(ABOUT.title))}>
             <WindowHeader title={ABOUT.title} icon={ABOUT.icon} onClickClose={() => dispatch(closePage(ABOUT.title))} onClickMinimize={() => dispatch(minimizePage(ABOUT.title))} />
             <WindowOptionsBar/>
             <AboutWrapper>

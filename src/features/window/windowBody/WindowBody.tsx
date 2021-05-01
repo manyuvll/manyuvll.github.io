@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import Draggable from 'react-draggable';
 
 interface WindowBodyWrapperProps {
-    zIndex: string
+    zIndex: number
 }
 
 const WindowBodyWrapper = styled.div`
@@ -17,13 +17,13 @@ const WindowBodyWrapper = styled.div`
     position: absolute;
     display: flex;
     flex-direction: column;
-    z-index: ${(props: WindowBodyWrapperProps) => props.zIndex}
+    z-index: ${(props: WindowBodyWrapperProps) => props.zIndex.toString()}
 `
 
 export interface WindowProps  { 
     children: React.ReactNode
     onClick: () => void
-    pageZIndex: string
+    pageZIndex: number
  }
 
 export default function WindowBody(props: WindowProps) {

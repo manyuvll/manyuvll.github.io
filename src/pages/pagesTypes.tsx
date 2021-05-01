@@ -1,11 +1,12 @@
 import aboutIcon from '../assets/icons/notepad.png'
 import curriculumIcon from '../assets/icons/curriculumIcon.png'
+import contactFolderIcon from '../assets/icons/contact-folder.png'
 
 export interface Page {
     title: string,
     icon: string,
     isMinimized: boolean
-    zIndex: string
+    zIndex: number
     width: string
 }
 
@@ -14,7 +15,7 @@ export const ABOUT = {
     icon: aboutIcon,
     isMinimized: false,
     width: "30rem",
-    zIndex: "1"
+    zIndex: 1
 }
 
 export const CURRICULUM = {
@@ -22,5 +23,13 @@ export const CURRICULUM = {
     icon: curriculumIcon,
     isMinimized: false,
     width: "fit-content",
-    zIndex: "1"
+    zIndex: 1
+}
+
+export const CONTACTME = {
+    title: "ContactMe",
+    icon: contactFolderIcon,
+    isMinimized: false,
+    width: "fit-content",
+    zIndex: 1
 }

@@ -1,17 +1,16 @@
 import styled from 'styled-components';
-import contactFolder from '../../assets/icons/contact-folder.png'
 import { useAppDispatch } from '../../app/hooks';
-import { ABOUT, CURRICULUM } from '../../pages/pagesTypes'
+import { ABOUT, CURRICULUM, CONTACTME } from '../../pages/pagesTypes'
 import { openPage } from '../../pages/pagesSlicer'
 
 const DesktopItems = styled.div`
- height: 50vh;
- width: 5rem;
- display: flex;
- flex-direction: column;
- margin-left: 12px;
- margin-top: 10px;
-`
+    height: 50vh;
+    width: 5rem;
+    display: flex;
+    flex-direction: column;
+    margin-left: 12px;
+    margin-top: 10px;
+    `
 
 const DesktopObjectWrapper = styled.div`
     height: auto;
@@ -49,10 +48,10 @@ export default function DesktopObjects() {
                 {CURRICULUM.title}
             </DesktopObjectTitle>
         </DesktopObjectWrapper>
-        <DesktopObjectWrapper>
-            <DesktopObjectImg src={contactFolder}/>
+        <DesktopObjectWrapper onClick={() => dispatch(openPage(CONTACTME))}>
+            <DesktopObjectImg src={CONTACTME.icon}/>
             <DesktopObjectTitle>
-                ContactMe
+                {CONTACTME.title}
             </DesktopObjectTitle>
         </DesktopObjectWrapper>
     </DesktopItems>
