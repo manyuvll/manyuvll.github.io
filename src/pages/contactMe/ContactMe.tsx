@@ -15,7 +15,7 @@ const ContactMeWrapper = styled.div`
     margin: 3px;
     height: 96%;
     width: fit-content;
-    min-width: 38.5rem;
+    min-width: 30.5rem;
     overflow: scroll;
     border-width: 2px;
     border-bottom: 1px solid white;

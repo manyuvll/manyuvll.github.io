@@ -33,7 +33,7 @@ const pagesSlice = createSlice({
             state.pages = state.pages.map(page => page.title === action.payload ? {...page, isMinimized: !page.isMinimized } : page)
         },
         focusPage: (state, action: PayloadAction<string>) => {
-            state.pages = state.pages.map(page => page.title === action.payload ? {...page, isMinimized: false, zIndex: Math.max(...state.pages.map(page => page.zIndex), 0)} : page)
+            state.pages = state.pages.map(page => page.title === action.payload ? {...page, isMinimized: false, zIndex: Math.max(...state.pages.map(page => page.zIndex), 0) + 1} : page)
         }
     }
 })
