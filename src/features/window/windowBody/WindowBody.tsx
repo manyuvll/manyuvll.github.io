@@ -26,13 +26,14 @@ export interface WindowProps  {
     children: React.ReactNode
     onClick: () => void
     pageZIndex: number
+    customClass: string
  }
 
 export default function WindowBody(props: WindowProps) {
 
     return(
         <Draggable bounds={isMobile ? 'body' : ''} onMouseDown={() => props.onClick()} cancel=".not-draggable" handle=".draggable-custom" defaultPosition={isMobile ?{x: 0, y: Math.floor(Math.random() * 101)} : {x: 230, y: 100}}>
-            <WindowBodyWrapper zIndex={props.pageZIndex}>
+            <WindowBodyWrapper className={props.customClass} zIndex={props.pageZIndex}>
                 {props.children}
             </WindowBodyWrapper>
         </Draggable>

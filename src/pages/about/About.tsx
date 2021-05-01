@@ -85,11 +85,15 @@ const Avatar = styled.img`
     height: auto;
 `
 
-export default function About() {
+interface AboutProps {
+    customClass: string
+}
+
+export default function About(props: AboutProps) {
     const dispatch = useAppDispatch()
 
     return(
-        <WindowBody pageZIndex={useAppSelector(selectAboutPageZIndex) || 1} onClick={() => dispatch(focusPage(ABOUT.title))}>
+        <WindowBody customClass={props.customClass} pageZIndex={useAppSelector(selectAboutPageZIndex) || 1} onClick={() => dispatch(focusPage(ABOUT.title))}>
             <WindowHeader title={ABOUT.title} icon={ABOUT.icon} onClickClose={() => dispatch(closePage(ABOUT.title))} onClickMinimize={() => dispatch(minimizePage(ABOUT.title))} />
             <WindowOptionsBar/>
             <AboutWrapper>

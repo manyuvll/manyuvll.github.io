@@ -32,13 +32,16 @@ const CurriculumWrapper = styled.div`
     background-color: white;
 `
 
+interface AboutProps {
+    customClass: string
+}
   
-export default function About() {
+export default function About(props: AboutProps) {
     const dispatch = useAppDispatch()
     const [pageNumber] = useState(1);
 
     return(
-        <WindowBody pageZIndex={useAppSelector(selectCurriculumPageZIndex) || 1} onClick={() => dispatch(focusPage(CURRICULUM.title))}>
+        <WindowBody customClass={props.customClass} pageZIndex={useAppSelector(selectCurriculumPageZIndex) || 1} onClick={() => dispatch(focusPage(CURRICULUM.title))}>
             <WindowHeader title={CURRICULUM.title} icon={CURRICULUM.icon} onClickClose={() => dispatch(closePage(CURRICULUM.title))} onClickMinimize={() => dispatch(minimizePage(CURRICULUM.title))} />
             <WindowOptionsBar/>
             <CurriculumWrapper>

@@ -38,9 +38,9 @@ function App() {
     <div className="App">
       <Style />
       <DesktopObjects/>
-      { aboutPage && !aboutPage.isMinimized && <About/>}
-      { curriculumPage && !curriculumPage.isMinimized && <Curriculum/>}
-      { contactMePage && !contactMePage.isMinimized && <ContactMe/>}
+      <About customClass={aboutPage && !aboutPage.isMinimized ? 'visible' : 'hidden'} />
+      <Curriculum customClass={curriculumPage && !curriculumPage.isMinimized ? 'visible' : 'hidden'}/>
+      <ContactMe customClass={contactMePage && !contactMePage.isMinimized ? 'visible' : 'hidden'}/>
       <NavigationBar/>
     </div>
   );

@@ -28,11 +28,14 @@ const ContactMeWrapper = styled.div`
     background-color: white;
 `
 
+interface ContactMeProps {
+    customClass: string
+}
 
-export default function ContactMe() {
+export default function ContactMe(props: ContactMeProps) {
     const dispatch = useAppDispatch()
     return(
-        <WindowBody pageZIndex={useAppSelector(selectContactMePageZIndex) || 1} onClick={() => dispatch(focusPage(CONTACTME.title))}>
+        <WindowBody customClass={props.customClass} pageZIndex={useAppSelector(selectContactMePageZIndex) || 1} onClick={() => dispatch(focusPage(CONTACTME.title))}>
             <WindowHeader title={CONTACTME.title} icon={CONTACTME.icon} onClickClose={() => dispatch(closePage(CONTACTME.title))} onClickMinimize={() => dispatch(minimizePage(CONTACTME.title))} />
             <WindowOptionsBar/>
             <ContactMeWrapper>
