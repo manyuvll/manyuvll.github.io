@@ -136,15 +136,15 @@ export default function StartMenu({ startButtonRef }: StartMenuProps) {
                     <ItemTitle>Restart</ItemTitle>
                 </StartMenuItem>
                 <ItemSeparator/>
-                <StartMenuItem onClick={() => dispatch(openPage(ABOUT)) && dispatch(click)}>
+                <StartMenuItem onClick={() => dispatch(openPage(ABOUT)) && dispatch(click())}>
                     <ItemIcon src={ABOUT.icon}/>
                     <ItemTitle>{ABOUT.title}</ItemTitle>
                 </StartMenuItem>
-                <StartMenuItem onClick={() => dispatch(openPage(CURRICULUM)) && dispatch(click)}>
+                <StartMenuItem onClick={() => dispatch(openPage(CURRICULUM)) && dispatch(click())}>
                     <ItemIcon src={CURRICULUM.icon}/>
                     <ItemTitle>{CURRICULUM.title}</ItemTitle>
                 </StartMenuItem>
-                <StartMenuItem onClick={() => dispatch(openPage(CONTACTME)) && dispatch(click)}>
+                <StartMenuItem onClick={() => dispatch(openPage(CONTACTME)) && dispatch(click())}>
                     <ItemIcon src={CONTACTME.icon}/>
                     <ItemTitle>{CONTACTME.title}</ItemTitle>
                 </StartMenuItem>

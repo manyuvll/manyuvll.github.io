@@ -32,7 +32,7 @@ export interface WindowProps  {
 export default function WindowBody(props: WindowProps) {
 
     return(
-        <Draggable bounds={isMobile ? 'body' : ''} onMouseDown={() => props.onClick()} cancel=".not-draggable" handle=".draggable-custom" defaultPosition={isMobile ?{x: 0, y: Math.floor(Math.random() * 101)} : {x: 230, y: 100}}>
+        <Draggable bounds={isMobile ? 'body' : ''} onMouseDown={() => props.onClick()} cancel=".not-draggable" handle=".draggable-custom" defaultPosition={isMobile ?{x: 0, y: Math.floor(Math.random() * 101)} : {x: 230, y: Math.floor(Math.random() * 101)}}>
             <WindowBodyWrapper className={props.customClass} zIndex={props.pageZIndex}>
                 {props.children}
             </WindowBodyWrapper>
