@@ -1,12 +1,14 @@
 import styled from 'styled-components';
 import Draggable from 'react-draggable';
+import {isMobile} from 'react-device-detect';
 
 interface WindowBodyWrapperProps {
     zIndex: number
 }
 
 const WindowBodyWrapper = styled.div`
-    width: fit-content;
+    width: ${() => isMobile ? 'auto' : 'fit-content'};
+    max-width: ${() => isMobile ? '90vw' : ''};
     height: 30rem;
     background-color: #bfc6c8;
     border-radius: 1px;
@@ -29,7 +31,7 @@ export interface WindowProps  {
 export default function WindowBody(props: WindowProps) {
 
     return(
-        <Draggable onMouseDown={() => props.onClick()} handle=".draggable-custom" defaultPosition={{x: 230, y: 100}}>
+        <Draggable bounds={isMobile ? 'body' : ''} onMouseDown={() => props.onClick()} cancel=".not-draggable" handle=".draggable-custom" defaultPosition={isMobile ?{x: 0, y: Math.floor(Math.random() * 101)} : {x: 230, y: 100}}>
             <WindowBodyWrapper zIndex={props.pageZIndex}>
                 {props.children}
             </WindowBodyWrapper>

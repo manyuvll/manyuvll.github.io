@@ -79,7 +79,7 @@ export default function WindowHeader(props: WindowHeaderProps) {
         <HeaderWrapper className="draggable-custom">
             <LogoImg src={props.icon}/>
             <>{props.title}</>
-            <GroupButton>           
+            <GroupButton className='not-draggable'>           
                 <MinimizeWindow onClick={() => props.onClickMinimize(props.title)}/>
                 <FullScreenWindow/>
                 <CloseWindow onClick={() => props.onClickClose(props.title)}/>

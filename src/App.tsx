@@ -20,6 +20,13 @@ const Style = createGlobalStyle`
     width: 100%;
     display: flex;
   }
+
+  .visible {
+    visibility: visible;
+  }
+  .hidden {
+    visibility: hidden
+  }
 `
 
 function App() {

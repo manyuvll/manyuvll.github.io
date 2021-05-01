@@ -9,6 +9,7 @@ import AvatarImg from '../../assets/picture/avatar.png'
 import { useAppDispatch, useAppSelector } from '../../app/hooks';
 import { ABOUT } from '../pagesTypes'
 import { closePage, minimizePage, focusPage, selectAboutPageZIndex } from '../pagesSlicer';
+import {isMobile} from 'react-device-detect';
 
 
 
@@ -19,7 +20,8 @@ color: rgb(255, 255, 255);
     flex-direction: column;
     margin: 3px;
     height: 96%;
-    width: 50rem;
+    width: ${() => isMobile ? 'fit-content' : '50rem'};;
+    overflow: scroll;
     border-width: 2px;
     border-bottom: 1px solid white;
     border-right: 1px solid white;
@@ -67,7 +69,7 @@ const Separator = styled.div`
 
 const Row = styled.div`
     display: flex;
-    flex-direction: row;
+    flex-direction: ${() => isMobile ? 'column' : 'row'};
     width: 100%;
 `
 

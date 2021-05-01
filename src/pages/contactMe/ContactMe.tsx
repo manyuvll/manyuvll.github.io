@@ -7,6 +7,7 @@ import WindowBody from '../../features/window/windowBody/WindowBody'
 import WindowFooter from '../../features/window/windowFooter/WindowFooter'
 import styled from 'styled-components'
 import ContactMeItems from './contactMeItems'
+import {isMobile} from 'react-device-detect';
 
 const ContactMeWrapper = styled.div`
     color: rgb(255, 255, 255);
@@ -14,8 +15,8 @@ const ContactMeWrapper = styled.div`
     flex-direction: column;
     margin: 3px;
     height: 96%;
-    width: fit-content;
-    min-width: 30.5rem;
+    width: ${isMobile ? 'auto' : 'fit-content'};;
+    min-width: ${isMobile ? '' : '30.5rem'};
     overflow: scroll;
     border-width: 2px;
     border-bottom: 1px solid white;

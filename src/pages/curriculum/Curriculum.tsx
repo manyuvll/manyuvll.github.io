@@ -9,6 +9,7 @@ import { CURRICULUM } from '../pagesTypes'
 import { closePage, minimizePage, focusPage, selectCurriculumPageZIndex } from '../pagesSlicer';
 import { Document, Page } from 'react-pdf/dist/esm/entry.webpack';
 import curriculumPDF from '../../assets/pdf/resume.pdf'
+import {isMobile} from 'react-device-detect';
 
 
 
@@ -18,8 +19,8 @@ const CurriculumWrapper = styled.div`
     flex-direction: column;
     margin: 3px;
     height: 96%;
-    width: fit-content;
-    min-width: 38.5rem;
+    width: ${() => isMobile ? 'auto' : 'fit-content'};;
+    min-width: ${() => isMobile ? '' : '38.5rem'};
     overflow: scroll;
     border-width: 2px;
     border-bottom: 1px solid white;
