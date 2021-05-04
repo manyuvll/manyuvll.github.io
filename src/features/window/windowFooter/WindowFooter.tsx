@@ -1,10 +1,10 @@
 import styled from 'styled-components';
 
-const NormalFooterWrapper = styled.div`
+const FooterWrapper = styled.div`
     display: flex;
     box-sizing: border-box;
 `
-const NormalFooter = styled.div`
+const Footer = styled.div`
     width: 100%;
     margin-bottom: 2px;
     margin-right: 2px;
@@ -31,9 +31,9 @@ const ResizerIcon = styled.div`
 
 export default function WindowFooter() {
     return (
-    <NormalFooterWrapper>
-        <NormalFooter>
+    <FooterWrapper>
+        <Footer>
             <ResizerIcon/>
-        </NormalFooter>
-    </NormalFooterWrapper>)
+        </Footer>
+    </FooterWrapper>)
 }
