@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/windows95Portfolio/static/css/main.07952834.chunk.css",
-    "main.js": "/windows95Portfolio/static/js/main.1d8c6d15.chunk.js",
-    "main.js.map": "/windows95Portfolio/static/js/main.1d8c6d15.chunk.js.map",
+    "main.js": "/windows95Portfolio/static/js/main.83aeeded.chunk.js",
+    "main.js.map": "/windows95Portfolio/static/js/main.83aeeded.chunk.js.map",
     "runtime-main.js": "/windows95Portfolio/static/js/runtime-main.cd346566.js",
     "runtime-main.js.map": "/windows95Portfolio/static/js/runtime-main.cd346566.js.map",
     "static/css/2.a97733c1.chunk.css": "/windows95Portfolio/static/css/2.a97733c1.chunk.css",
@@ -25,6 +25,6 @@
     "static/css/2.a97733c1.chunk.css",
     "static/js/2.d0dedcf6.chunk.js",
     "static/css/main.07952834.chunk.css",
-    "static/js/main.1d8c6d15.chunk.js"
+    "static/js/main.83aeeded.chunk.js"
   ]
 }
