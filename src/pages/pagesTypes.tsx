@@ -33,3 +33,5 @@ export const CONTACTME = {
     width: "fit-content",
     zIndex: 1
 }
+export const pagesTypes = [ABOUT, CURRICULUM, CONTACTME]
+

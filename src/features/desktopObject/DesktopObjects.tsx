@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { useAppDispatch } from '../../app/hooks';
-import { ABOUT, CURRICULUM, CONTACTME } from '../../pages/pagesTypes'
+import { pagesTypes } from '../../pages/pagesTypes'
 import { openPage } from '../../pages/pagesSlicer'
 
 const DesktopItems = styled.div`
@@ -36,24 +36,18 @@ export default function DesktopObjects() {
 
     return (
     <DesktopItems>
-        <DesktopObjectWrapper onClick={() => dispatch(openPage(ABOUT))}>
-            <DesktopObjectImg src={ABOUT.icon}/>
-            <DesktopObjectTitle>
-                {ABOUT.title}
-            </DesktopObjectTitle>
-        </DesktopObjectWrapper>
-        <DesktopObjectWrapper onClick={() => dispatch(openPage(CURRICULUM))}>
-            <DesktopObjectImg src={CURRICULUM.icon}/>
-            <DesktopObjectTitle>
-                {CURRICULUM.title}
-            </DesktopObjectTitle>
-        </DesktopObjectWrapper>
-        <DesktopObjectWrapper onClick={() => dispatch(openPage(CONTACTME))}>
-            <DesktopObjectImg src={CONTACTME.icon}/>
-            <DesktopObjectTitle>
-                {CONTACTME.title}
-            </DesktopObjectTitle>
-        </DesktopObjectWrapper>
+       {
+           pagesTypes.map(page => { 
+               return (
+            <DesktopObjectWrapper onClick={() => dispatch(openPage(page))}>
+                <DesktopObjectImg src={page.icon}/>
+                <DesktopObjectTitle>
+                    {page.title}
+                </DesktopObjectTitle>
+            </DesktopObjectWrapper>
+               )
+           })
+       } 
     </DesktopItems>
     )
 }
