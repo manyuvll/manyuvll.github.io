@@ -1,7 +1,5 @@
 import styled from 'styled-components'
-import linkedinIcon from '../../assets/icons/linkedin-icon.png'
-import githubIcon from '../../assets/icons/github-icon.png'
-import twitterIcon from '../../assets/icons/twitter-icon.png'
+import internetExplorer from '../../assets/icons/ie.png'
 
 interface Item {
     label: string,
@@ -11,19 +9,19 @@ interface Item {
 
 const items: Array<Item> = [
     {
-        label: `Linkedin`,
-        url: `https://linkedin.com/in/emanuele-vella`,
-        icon: linkedinIcon
+        label: `Windows 95 Portfolio`,
+        url: `https://github.com/manyuvll/windows95Portfolio`,
+        icon: internetExplorer
     },
     {
-        label: `Github`,
-        url: `https://github.com/manyuvll`,
-        icon: githubIcon
+        label: `Hareteiru (Weather APP)`,
+        url: `https://github.com/manyuvll/hareteiru`,
+        icon: internetExplorer
     },
     {
-        label: `Twitter`,
-        url: `https://twitter.com/manyu_vll`,
-        icon: twitterIcon
+        label: `Tom Nook's Listing`,
+        url: `https://github.com/manyuvll/shopping-list`,
+        icon: internetExplorer
     },
 
 ]
@@ -46,7 +44,7 @@ const ItemLink = styled.a `
     font-size: 0.9rem;
     color: black;
     margin-top: 15px;
-    margin-left: 10px;
+    margin-left: 30px;
     flex-direction: column;
     display: flex;
     justify-content: center;

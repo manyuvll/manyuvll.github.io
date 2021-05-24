@@ -1,6 +1,6 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { RootState } from '../app/store';
-import { Page, ABOUT, CURRICULUM, CONTACTME } from './pagesTypes'
+import { Page, ABOUT, CURRICULUM, CONTACTME, PROJECTS } from './pagesTypes'
 
 
 export interface pagesState {
@@ -49,5 +49,9 @@ export const selectCurriculumPageZIndex = (state: RootState) => state.pages.page
 
 export const selectContactMePage = (state: RootState) => state.pages.pages.filter(value => value?.title === CONTACTME.title).pop();
 export const selectContactMePageZIndex = (state: RootState) => state.pages.pages.filter(value => value?.title === CONTACTME.title).pop()?.zIndex;
+
+export const selectProjectsPage = (state: RootState) => state.pages.pages.filter(value => value?.title === PROJECTS.title).pop();
+export const selectProjectsPageZIndex = (state: RootState) => state.pages.pages.filter(value => value?.title === PROJECTS.title).pop()?.zIndex;
+
 
 export default pagesSlice.reducer;

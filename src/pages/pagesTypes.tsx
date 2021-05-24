@@ -1,6 +1,7 @@
 import aboutIcon from '../assets/icons/notepad.png'
 import curriculumIcon from '../assets/icons/curriculumIcon.png'
 import contactFolderIcon from '../assets/icons/contact-folder.png'
+import projectFolderIcon from '../assets/icons/project-folder.png'
 
 export interface Page {
     title: string,
@@ -33,5 +34,14 @@ export const CONTACTME = {
     width: "fit-content",
     zIndex: 1
 }
-export const pagesTypes = [ABOUT, CURRICULUM, CONTACTME]
+
+export const PROJECTS = {
+    title: "Projects",
+    icon: projectFolderIcon,
+    isMinimized: false,
+    width: "fit-content",
+    zIndex: 1
+}
+
+export const pagesTypes = [ABOUT, CURRICULUM, CONTACTME, PROJECTS]
 
