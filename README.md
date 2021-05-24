@@ -14,7 +14,7 @@
 > Used ReactJS /w hooks + Redux and handmade CSS.
 > This project is still WIP. ⚠️
 
-### ✨ [Demo](https://manyuvll.github.io/windows95Portfolio/)
+### ✨ [Demo](https://manyuvll.github.io/)
 
 <img alt="Screenshot" src="https://media.discordapp.net/attachments/625998454610460672/835454932185645066/Capture_decran_2021-04-24_a_18.59.09.png"/>
 
