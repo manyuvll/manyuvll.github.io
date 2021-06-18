@@ -40,7 +40,7 @@
 
 👤 **Emanuele Vella**
 
-- Twitter: [@manu_vll](https://twitter.com/manyu_vll)
+- Twitter: [@manyu_vll](https://twitter.com/manyu_vll)
 - Github: [@manyuvll](https://github.com/manyuvll)
 - LinkedIn: [@emanuele-vella](https://linkedin.com/in/emanuele-vella)
 
