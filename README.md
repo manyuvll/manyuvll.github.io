@@ -5,8 +5,8 @@
   <a href="#" target="_blank">
     <img alt="License: MIT" src="https://img.shields.io/badge/License-MIT-yellow.svg" />
   </a>
-  <a href="https://twitter.com/manu_vll" target="_blank">
-    <img alt="Twitter: manu_vll" src="https://img.shields.io/twitter/follow/manu_vll.svg?style=social" />
+  <a href="https://twitter.com/manyu_vll" target="_blank">
+    <img alt="Twitter: manyu_vll" src="https://img.shields.io/twitter/follow/manyu_vll.svg?style=social" />
   </a>
 </p>
 
@@ -40,7 +40,7 @@
 
 👤 **Emanuele Vella**
 
-- Twitter: [@manu_vll](https://twitter.com/manu_vll)
+- Twitter: [@manu_vll](https://twitter.com/manyu_vll)
 - Github: [@manyuvll](https://github.com/manyuvll)
 - LinkedIn: [@emanuele-vella](https://linkedin.com/in/emanuele-vella)
 
